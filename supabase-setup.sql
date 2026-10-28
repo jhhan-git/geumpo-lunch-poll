@@ -5,7 +5,7 @@ create table if not exists public.lunch_votes (
   voter_id   uuid primary key,
   dept       text not null check (char_length(dept) between 1 and 30),
   name       text not null check (char_length(name) between 1 and 20),
-  choice     text not null check (choice in ('doenjang', 'sundubu', 'donkatsu', 'none')),
+  choice     text not null check (choice in ('doenjang', 'sundubu', 'donkatsu')),
   updated_at timestamptz not null default now()
 );
 
